@@ -1,0 +1,284 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		/*color: @white;*/
+		background-color: @critical;
+	}
+}
+
+
+
+@import "/home/mousse/.cache/wal/colors-waybar.css";
+@import "/home/mousse/dotfiles/waybar/colors-waybar-contrast.css";
+
+
+@define-color black         @background;
+@define-color black_text    @background_contrast;
+
+@define-color white         @foreground;
+@define-color white_text    #282828;
+
+
+@define-color warning 	    @color11;
+@define-color warning_text 	@color11_contrast;
+
+@define-color critical	    @color1; 
+@define-color critical_text	@color1_contrast; 
+
+@define-color mode	    @black;
+@define-color mode_text	@black_contrast;
+
+@define-color unfocused	        @color8; 
+@define-color unfocused_text	@color8_contrast;
+
+
+@define-color focused	    @color14;
+@define-color focused_text	@color14_contrast;
+
+@define-color inactive	    @color5; 
+@define-color inactive_text	@color5_contrast;
+
+@define-color sound	        @color13;  
+@define-color sound_text	@color13_contrast;
+
+@define-color network	    @color13; 
+@define-color network_text	@color13_contrast;
+
+@define-color memory	    @color12;
+@define-color memory_text	@color12_contrast;
+
+@define-color cpu	    @color11;   
+@define-color cpu_text	@color11_contrast;
+
+@define-color temp	    @color11;  
+@define-color temp_text	@color11_contrast;
+
+@define-color layout	    @color10;
+@define-color layout_text	@color10_contrast;
+
+@define-color battery	    @color10; 
+@define-color battery_text	@color10_contrast;
+
+@define-color date	    @black;
+@define-color date_text	@black_text;
+
+@define-color time	    @white;
+@define-color time_text	@white_text;
+/* Reset all styles */
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-shadow: none;
+	icon-shadow: none;
+}
+
+/* The whole bar */
+#waybar {
+	background: alpha(@background, 0.8784313725); /* #282828e0 */
+	color: @white;
+	font-family: JetBrains Mono, Siji;
+	font-size: 10pt;
+	/*font-weight: bold;*/
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#language,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#backlight,
+#idle_inhibitor,
+#disk,
+#user,
+#mpris {
+	padding-left: 8pt;
+	padding-right: 8pt;
+}
+
+/* Each critical module */
+#mode,
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 1s;
+}
+
+/* Each warning */
+#network.disconnected,
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning.discharging {
+	color: @warning;
+}
+
+/* And now modules themselves in their respective order */
+
+/* Current sway mode (resize etc) */
+#mode {
+	color: @white;
+	background: @mode;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+	/*font-weight: bold;*/
+	padding-left: 2pt;
+	padding-right: 2pt;
+	color: @unfocused_text;
+	background: @unfocused;
+}
+
+/* Inactive (on unfocused output) */
+#workspaces button.visible {
+	color: @inactive_text;
+	background: @inactive;
+}
+
+/* Active (on focused output) */
+#workspaces button.focused {
+	color: @focused_text;
+	background: @focused;
+}
+
+/* Contains an urgent window */
+#workspaces button.urgent {
+	color: @warning_text;
+	background: @warning;
+}
+
+/* Style when cursor is on the button */
+#workspaces button:hover {
+	background: @black;
+	color: @black_text;
+}
+
+#window {
+	margin-right: 35pt;
+	margin-left: 35pt;
+}
+
+#pulseaudio {
+	background: @sound;
+	color: @sound_text;
+}
+
+#network {
+	background: @network;
+	color: @network_text;
+}
+
+#memory {
+	background: @memory;
+	color: @memory_text;
+}
+
+#cpu {
+	background: @cpu;
+	color: @cpu_text;
+}
+
+#temperature {
+	background: @temp;
+	color: @temp_text;
+}
+
+#language {
+	background: @layout;
+	color: @layout_text;
+}
+
+#battery {
+	background: @battery;
+	color: @battery_text;
+}
+
+#tray {
+	background: @date;
+}
+
+#clock.date {
+	background: @date;
+	color: @date_text;
+}
+
+#clock.time {
+	background: @time;
+	color: @time_text;
+}
+
+#custom-arrow1 {
+	font-size: 11pt;
+	color: @time;
+	background: @date;
+}
+
+#custom-arrow2 {
+	font-size: 11pt;
+	color: @date;
+	background: @layout;
+}
+
+#custom-arrow3 {
+	font-size: 11pt;
+	color: @layout;
+	background: @battery;
+}
+
+#custom-arrow4 {
+	font-size: 11pt;
+	color: @battery;
+	background: @temp;
+}
+
+#custom-arrow5 {
+	font-size: 11pt;
+	color: @temp;
+	background: @cpu;
+}
+
+#custom-arrow6 {
+	font-size: 11pt;
+	color: @cpu;
+	background: @memory;
+}
+
+#custom-arrow7 {
+	font-size: 11pt;
+	color: @memory;
+	background: @network;
+}
+
+#custom-arrow8 {
+	font-size: 11pt;
+	color: @network;
+	background: @sound;
+}
+
+#custom-arrow9 {
+	font-size: 11pt;
+	color: @sound;
+	background: transparent;
+}
+
+#custom-arrow10 {
+	font-size: 11pt;
+	color: @unfocused;
+	background: transparent;
+}

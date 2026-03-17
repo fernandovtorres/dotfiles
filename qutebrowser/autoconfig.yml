@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  colors.tabs.bar.bg:
-    global: rgba(0,0,0,0)
-  window.transparent:
-    global: true
+  content.blocking.method:
+    global: both

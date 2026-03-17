@@ -6,6 +6,7 @@ config.load_autoconfig(False)
 config.set("content.blocking.enabled", True)
 config.set("content.cookies.accept", "never")
 config.set("content.cookies.store", True)
+config.set("content.blocking.method", "both")
 
 
 # Persistent logins
@@ -16,6 +17,8 @@ config.set("content.cookies.accept", "all", "*://*.google.com.br/*")
 config.set("content.cookies.accept", "all", "*://*.usp.br/*")
 config.set("content.cookies.accept", "all", "*://*.telegram.org/*")
 config.set("content.cookies.accept", "all", "*://*.github.com/*")
+config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
+config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
 
 
 # Vertical tabs
@@ -33,9 +36,6 @@ c.url.searchengines = {
 # Completion
 
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
-
-# Binds
-config.bind('h', 'history')
 
 # Dark Mode
 c.colors.webpage.darkmode.enabled = True
