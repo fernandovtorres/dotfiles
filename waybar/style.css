@@ -9,8 +9,8 @@
 
 
 
-@import "/home/mousse/.cache/wal/colors-waybar.css";
-@import "/home/mousse/dotfiles/waybar/colors-waybar-contrast.css";
+@import "/home/pave/.cache/wal/colors-waybar.css";
+@import "/home/pave/dotfiles/waybar/colors-waybar-contrast.css";
 
 
 @define-color black         @background;

@@ -9,7 +9,7 @@ set choice (fzf --walker-root=$HOME/wallpapers \
 
 if test -n "$choice"
     wal -i "$choice"
-    python3 /home/mousse/dotfiles/sway/scripts/waybar-constrast.py
+    python3 /home/pave/dotfiles/sway/scripts/waybar-constrast.py
     pkill swaybg
     swaymsg exec "swaybg -i '$choice' -m fill"
 end

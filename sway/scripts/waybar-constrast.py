@@ -1,8 +1,8 @@
 import json
 import os
 
-wal_cache = os.path.expanduser("/home/mousse/.cache/wal/colors.json")
-out_file = os.path.expanduser("/home/mousse/dotfiles/waybar/colors-waybar-contrast.css")
+wal_cache = os.path.expanduser("/home/pave/.cache/wal/colors.json")
+out_file = os.path.expanduser("/home/pave/dotfiles/waybar/colors-waybar-contrast.css")
 
 def get_contrast(hex_color):
     hex_color = hex_color.lstrip('#')
