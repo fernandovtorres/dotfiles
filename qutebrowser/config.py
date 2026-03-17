@@ -6,6 +6,7 @@ config.load_autoconfig(False)
 config.set("content.blocking.enabled", True)
 config.set("content.cookies.accept", "never")
 config.set("content.cookies.store", True)
+config.set("content.blocking.method", "both")
 
 
 # Persistent logins
