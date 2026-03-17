@@ -16,11 +16,18 @@ config.set("content.cookies.accept", "all", "*://*.google.com.br/*")
 config.set("content.cookies.accept", "all", "*://*.usp.br/*")
 config.set("content.cookies.accept", "all", "*://*.telegram.org/*")
 config.set("content.cookies.accept", "all", "*://*.github.com/*")
+config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
+config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
 
 
 # Vertical tabs
 c.tabs.position = "left"
 c.tabs.width = "5%"
+
+# Scroll
+config.set("scrolling.smooth", True)
+config.bind('j', 'scroll-px 0 100')
+config.bind('k', 'scroll-px 0 -100')
 
 # Search Engines
 c.url.searchengines = {
@@ -33,9 +40,6 @@ c.url.searchengines = {
 # Completion
 
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
-
-# Binds
-config.bind('h', 'history')
 
 # Dark Mode
 c.colors.webpage.darkmode.enabled = True

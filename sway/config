@@ -22,6 +22,7 @@ set $menu fuzzel
 
 exec gammastep -l -22.005100:-47.895814 -b 0.8:0.4 -t 6500:3000
 exec python /home/mousse/.config/sway/scripts/inactive-windows-transparency.py
+exec waybar
 
 ### Windows Titles
 default_border none
@@ -67,12 +68,13 @@ for_window [app_id="fzf-popup"] {
 #
 # Example configuration:
 #
-#   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+   input type:touchpad {
+       dwt enabled
+       tap enabled
+       tap_button_map lrm
+       natural_scroll enabled
+       middle_emulation enabled
+   }
    input type:keyboard {
        xkb_layout us,br
        xkb_options grp:win_space_toggle
@@ -245,23 +247,5 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | tee "$HOME/img/screen/screen_$(date +%Y%m%d_%H%M%S).png" | wl-copy
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 include /etc/sway/config.d/*
