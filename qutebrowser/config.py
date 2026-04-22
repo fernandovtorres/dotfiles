@@ -13,12 +13,21 @@ config.set("content.blocking.method", "both")
 config.set("content.cookies.accept", "all", "*://*.reddit.com/*")
 config.set("content.cookies.accept", "all", "*://*.youtube.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com/*")
+config.set("content.cookies.accept", "all", "*://*.withgoogle.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com.br/*")
 config.set("content.cookies.accept", "all", "*://*.usp.br/*")
 config.set("content.cookies.accept", "all", "*://*.telegram.org/*")
 config.set("content.cookies.accept", "all", "*://*.github.com/*")
 config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
 config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
+config.set("content.cookies.accept", "all", "*://*.overleaf.com/*")
+config.set("content.cookies.accept", "all", "*://*.wolframalpha.com/*")
+config.set("content.cookies.accept", "all", "*://*.canva.com/*")
+config.set("content.cookies.accept", "all", "*://*.leetcode.com/*")
+config.set("content.cookies.accept", "all", "*://*.linkedin.com/*")
+config.set("content.cookies.accept", "all", "*://*.figma.com/*")
+config.set("content.cookies.accept", "all", "*://*.sampa-curso.org/*")
+config.set("content.cookies.accept", "all", "*://*.claude.ai/*")
 
 
 # Vertical tabs
@@ -38,13 +47,14 @@ c.url.searchengines = {
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
 # Dark Mode
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-c.colors.webpage.darkmode.policy.images = 'never'
 config.set('colors.webpage.darkmode.enabled', False, 'file://*')
 
 
 # Colorscheme
+#c.colors.webpage.darkmode.enabled = False
+#c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+#c.colors.webpage.darkmode.policy.images = 'never'
+c.colors.webpage.preferred_color_scheme = 'dark'
 
 
 import json
