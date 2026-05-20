@@ -15,6 +15,7 @@ config.set("qt.force_software_rendering", "chromium")
 config.set("content.cookies.accept", "all", "*://*.reddit.com/*")
 config.set("content.cookies.accept", "all", "*://*.youtube.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com/*")
+config.set("content.cookies.accept", "all", "*://*.withgoogle.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com.br/*")
 config.set("content.cookies.accept", "all", "*://*.usp.br/*")
 config.set("content.cookies.accept", "all", "*://*.telegram.org/*")
@@ -23,6 +24,7 @@ config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
 config.set("content.cookies.accept", "all", "*://*.codeforces.com/*")
 config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
 config.set("content.cookies.accept", "all", "*://*.overleaf.com/*")
+<<<<<<< HEAD
 config.set("content.cookies.accept", "all", "*://*.leetcode.com/*")
 config.set("content.cookies.accept", "all", "*://*.diagrams.net/*")
 config.set("content.cookies.accept", "all", "*://*.linkedin.com/*")
@@ -42,6 +44,16 @@ config.set("content.cookies.accept", "all", "*://*.graphoe.com/*")
 config.set("content.cookies.accept", "all", "*://*.cnpq.br/*")
 config.set("content.cookies.accept", "all", "*://*.myanimelist.net/*")
 config.set("content.cookies.accept", "all", "*://*.mixmax.com/*")
+=======
+config.set("content.cookies.accept", "all", "*://*.wolframalpha.com/*")
+config.set("content.cookies.accept", "all", "*://*.canva.com/*")
+config.set("content.cookies.accept", "all", "*://*.leetcode.com/*")
+config.set("content.cookies.accept", "all", "*://*.linkedin.com/*")
+config.set("content.cookies.accept", "all", "*://*.figma.com/*")
+config.set("content.cookies.accept", "all", "*://*.sampa-curso.org/*")
+config.set("content.cookies.accept", "all", "*://*.claude.ai/*")
+
+>>>>>>> origin/main
 
 # Vertical tabs
 c.tabs.position = "left"
@@ -73,6 +85,10 @@ config.set('colors.webpage.darkmode.enabled', False, 'file://*')
 
 
 # Colorscheme
+#c.colors.webpage.darkmode.enabled = False
+#c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+#c.colors.webpage.darkmode.policy.images = 'never'
+c.colors.webpage.preferred_color_scheme = 'dark'
 
 
 import json
