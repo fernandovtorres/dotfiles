@@ -1,4 +1,3 @@
-# Default editor
 c.editor.command = ['kitty', '-e', 'nvim', '{file}', '-c', 'normal {line}G{column0}l']
 
 # Privacy
@@ -7,6 +6,9 @@ config.set("content.blocking.enabled", True)
 config.set("content.cookies.accept", "never")
 config.set("content.cookies.store", True)
 config.set("content.blocking.method", "both")
+
+# QT bug
+config.set("qt.force_software_rendering", "chromium")
 
 
 # Persistent logins
@@ -18,8 +20,28 @@ config.set("content.cookies.accept", "all", "*://*.usp.br/*")
 config.set("content.cookies.accept", "all", "*://*.telegram.org/*")
 config.set("content.cookies.accept", "all", "*://*.github.com/*")
 config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
+config.set("content.cookies.accept", "all", "*://*.codeforces.com/*")
 config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
-
+config.set("content.cookies.accept", "all", "*://*.overleaf.com/*")
+config.set("content.cookies.accept", "all", "*://*.leetcode.com/*")
+config.set("content.cookies.accept", "all", "*://*.diagrams.net/*")
+config.set("content.cookies.accept", "all", "*://*.linkedin.com/*")
+config.set("content.cookies.accept", "all", "*://*.wolframalpha.com/*")
+config.set("content.cookies.accept", "all", "*://*.timeful.app/*")
+config.set("content.cookies.accept", "all", "*://*.canva.com/*")
+config.set("content.cookies.accept", "all", "*://*.neps.academy/*")
+config.set("content.cookies.accept", "all", "*://*.cses.fi/*")
+config.set("content.cookies.accept", "all", "*://*.claude.ai/*")
+config.set("content.cookies.accept", "all", "*://*.figma.com/*")
+config.set("content.cookies.accept", "all", "*://*.atcoder.jp/*")
+config.set("content.cookies.accept", "all", "*://*.beecrowd.com/*")
+config.set("content.cookies.accept", "all", "*://*.spoj.com/*")
+config.set("content.cookies.accept", "all", "*://*.squig.link/*")
+config.set("content.cookies.accept", "all", "*://*.amazon.jobs/*")
+config.set("content.cookies.accept", "all", "*://*.graphoe.com/*")
+config.set("content.cookies.accept", "all", "*://*.cnpq.br/*")
+config.set("content.cookies.accept", "all", "*://*.myanimelist.net/*")
+config.set("content.cookies.accept", "all", "*://*.mixmax.com/*")
 
 # Vertical tabs
 c.tabs.position = "left"
@@ -32,7 +54,7 @@ config.bind('k', 'scroll-px 0 -100')
 
 # Search Engines
 c.url.searchengines = {
-        'DEFAULT': 'https://duckduckgo.com/?q={}',
+        'DEFAULT': 'https://google.com/search?hl=en&q={}',
         '!aw': 'https://wiki.archlinux.org/?search={}',
         '!yt': 'https://www.youtube.com/results?search_query={}',
         '!re': 'https://www.reddit.com/search/?q={}'
@@ -43,9 +65,10 @@ c.url.searchengines = {
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
 # Dark Mode
-c.colors.webpage.darkmode.enabled = True
-c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
-c.colors.webpage.darkmode.policy.images = 'never'
+#c.colors.webpage.darkmode.enabled = True
+#c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+#c.colors.webpage.darkmode.policy.images = 'never'
+c.colors.webpage.preferred_color_scheme = 'dark'
 config.set('colors.webpage.darkmode.enabled', False, 'file://*')
 
 
@@ -126,5 +149,5 @@ c.colors.downloads.stop.bg = colorss["color8"]
 c.colors.downloads.stop.fg = fg
 
 c.colors.tooltip.bg = bg
-c.colors.webpage.bg = bg
+c.colors.webpage.bg = "white"
 c.hints.border = fg

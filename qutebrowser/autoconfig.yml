@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  scrolling.smooth:
-    global: false
-  content.blocking.method:
-    global: both
+  content.local_content_can_access_remote_urls:
+    global: true
