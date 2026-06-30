@@ -20,7 +20,7 @@ set $menu fuzzel
 
 ### Exec on Boot
 
-exec gammastep -l -22.005100:-47.895814 -b 0.8:0.4 -t 6500:3000
+exec gammastep -l -22.005100:-47.895814 -t 6500:3000
 exec python /home/pave/.config/sway/scripts/inactive-windows-transparency.py
 exec waybar
 
@@ -268,4 +268,5 @@ bindsym $mod+c mode "config"
     # Special key to take a screenshot with grim
     bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | tee "$HOME/img/screen/screen_$(date +%Y%m%d_%H%M%S).png" | wl-copy
 
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 include /etc/sway/config.d/*
