@@ -20,7 +20,7 @@ set $menu fuzzel
 
 ### Exec on Boot
 
-exec gammastep -l -22.005100:-47.895814 -b 0.8:0.4 -t 6500:3000
+exec gammastep -l -22.005100:-47.895814 -b 0.8:0.7 -t 6500:3000
 exec python /home/mousse/.config/sway/scripts/inactive-windows-transparency.py
 exec waybar
 

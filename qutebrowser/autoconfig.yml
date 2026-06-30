@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  content.notifications.enabled:
-    https://web.telegram.org: false
+  content.register_protocol_handler:
+    https://calendar.google.com?cid=%25s: false

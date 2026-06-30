@@ -8,11 +8,15 @@ config.set("content.cookies.accept", "never")
 config.set("content.cookies.store", True)
 config.set("content.blocking.method", "both")
 
+# Autoplay
+config.set("content.autoplay", False)
+
 
 # Persistent logins
 config.set("content.cookies.accept", "all", "*://*.reddit.com/*")
 config.set("content.cookies.accept", "all", "*://*.youtube.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com/*")
+config.set("content.cookies.accept", "all", "*://*.google.dev/*")
 config.set("content.cookies.accept", "all", "*://*.withgoogle.com/*")
 config.set("content.cookies.accept", "all", "*://*.google.com.br/*")
 config.set("content.cookies.accept", "all", "*://*.usp.br/*")
@@ -21,13 +25,15 @@ config.set("content.cookies.accept", "all", "*://*.github.com/*")
 config.set("content.cookies.accept", "all", "*://*.geeksforgeeks.org/*")
 config.set("content.cookies.accept", "all", "*://*.whatsapp.com/*")
 config.set("content.cookies.accept", "all", "*://*.overleaf.com/*")
-config.set("content.cookies.accept", "all", "*://*.wolframalpha.com/*")
 config.set("content.cookies.accept", "all", "*://*.canva.com/*")
 config.set("content.cookies.accept", "all", "*://*.leetcode.com/*")
 config.set("content.cookies.accept", "all", "*://*.linkedin.com/*")
-config.set("content.cookies.accept", "all", "*://*.figma.com/*")
-config.set("content.cookies.accept", "all", "*://*.sampa-curso.org/*")
 config.set("content.cookies.accept", "all", "*://*.claude.ai/*")
+config.set("content.cookies.accept", "all", "*://*.amazon.jobs/*")
+config.set("content.cookies.accept", "all", "*://*.amazon.com/*")
+config.set("content.cookies.accept", "all", "*://*.myanimelist.net/*")
+config.set("content.cookies.accept", "all", "*://*.brave.com/*")
+
 
 
 # Vertical tabs
@@ -36,7 +42,7 @@ c.tabs.width = "5%"
 
 # Search Engines
 c.url.searchengines = {
-        'DEFAULT': 'https://duckduckgo.com/?q={}',
+        'DEFAULT': 'https://search.brave.com/search?q={}',
         '!aw': 'https://wiki.archlinux.org/?search={}',
         '!yt': 'https://www.youtube.com/results?search_query={}',
         '!re': 'https://www.reddit.com/search/?q={}'
@@ -131,5 +137,5 @@ c.colors.downloads.stop.bg = colorss["color8"]
 c.colors.downloads.stop.fg = fg
 
 c.colors.tooltip.bg = bg
-c.colors.webpage.bg = bg
+c.colors.webpage.bg = "white"
 c.hints.border = fg
